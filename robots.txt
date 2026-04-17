@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://richend0913.github.io/zense-shindan/sitemap.xml
