@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>前世&来世診断 - あなたの魂の物語</title>
-  <meta name="description" content="名前と誕生日を入力するだけで、あなたの前世と来世が判明！縄文時代から大正時代まで12の時代、360以上の職業データベースから導き出すスピリチュアル診断。完全無料。">
-  <meta name="keywords" content="前世診断,来世診断,前世占い,来世占い,スピリチュアル,魂,診断,無料">
+  <title>スピリチュアル診断 - 前世来世・相性・運勢・守護霊・異世界転生</title>
+  <meta name="description" content="5種類のスピリチュアル診断が全て無料！前世来世診断、相性診断、今日の運勢、守護霊診断、異世界転生診断。名前と誕生日を入力するだけ。">
+  <meta name="keywords" content="前世診断,来世診断,相性診断,今日の運勢,守護霊診断,異世界転生診断,スピリチュアル,占い,無料">
   <link rel="canonical" href="https://richend0913.github.io/zense-shindan/">
 
   <!-- OGP -->
-  <meta property="og:title" content="前世&来世診断 - あなたの魂の物語">
-  <meta property="og:description" content="名前と誕生日から、あなたの前世と来世を診断。12の時代×360以上の職業から導く魂の記憶。">
+  <meta property="og:title" content="スピリチュアル診断 - 5種類の無料診断">
+  <meta property="og:description" content="前世来世・相性・運勢・守護霊・異世界転生。5種類のスピリチュアル診断が全て無料！">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://richend0913.github.io/zense-shindan/">
   <meta property="og:image" content="https://richend0913.github.io/zense-shindan/ogp.png">
-  <meta property="og:site_name" content="前世&来世診断">
+  <meta property="og:site_name" content="スピリチュアル診断">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="前世&来世診断 - あなたの魂の物語">
-  <meta name="twitter:description" content="名前と誕生日から、あなたの前世と来世を診断。12の時代×360以上の職業から導く魂の記憶。">
+  <meta name="twitter:title" content="スピリチュアル診断 - 5種類の無料診断">
+  <meta name="twitter:description" content="前世来世・相性・運勢・守護霊・異世界転生。5種類のスピリチュアル診断が全て無料！">
   <meta name="twitter:image" content="https://richend0913.github.io/zense-shindan/ogp.png">
 
   <!-- Structured Data -->
@@ -26,8 +26,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "前世&来世診断",
-    "description": "名前と誕生日を入力するだけで、あなたの前世と来世が判明するスピリチュアル診断",
+    "name": "スピリチュアル診断",
+    "description": "前世来世・相性・運勢・守護霊・異世界転生の5種類のスピリチュアル診断が全て無料",
     "url": "https://richend0913.github.io/zense-shindan/",
     "applicationCategory": "EntertainmentApplication",
     "operatingSystem": "Web Browser",
@@ -43,9 +43,6 @@
   <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6327505164684489" crossorigin="anonymous"></script>
 
-  <!-- Google Analytics placeholder -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -59,16 +56,54 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
+  <!-- Diagnosis Counter -->
+  <div class="diagnosis-counter" id="diagnosis-counter">
+    <span class="counter-icon">&#x1F52E;</span>
+    <span class="counter-text"><span id="counter-number">0</span>人が診断済み</span>
+  </div>
+
+  <!-- Navigation Cards -->
+  <nav class="nav-cards" id="nav-cards">
+    <div class="nav-cards-inner">
+      <button class="nav-card active" data-type="pastlife">
+        <span class="nav-card-icon">&#x1F52E;</span>
+        <span class="nav-card-name">前世&来世</span>
+        <span class="nav-card-badge badge-popular">人気</span>
+      </button>
+      <button class="nav-card" data-type="compatibility">
+        <span class="nav-card-icon">&#x1F495;</span>
+        <span class="nav-card-name">相性診断</span>
+        <span class="nav-card-badge badge-new">NEW</span>
+      </button>
+      <button class="nav-card" data-type="fortune">
+        <span class="nav-card-icon">&#x2B50;</span>
+        <span class="nav-card-name">今日の運勢</span>
+        <span class="nav-card-badge badge-daily">毎日</span>
+      </button>
+      <button class="nav-card" data-type="guardian">
+        <span class="nav-card-icon">&#x1F47B;</span>
+        <span class="nav-card-name">守護霊</span>
+        <span class="nav-card-badge badge-new">NEW</span>
+      </button>
+      <button class="nav-card" data-type="isekai">
+        <span class="nav-card-icon">&#x2694;</span>
+        <span class="nav-card-name">異世界転生</span>
+        <span class="nav-card-badge badge-new">NEW</span>
+      </button>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
   <header class="hero" id="hero">
     <div class="hero-content">
-      <div class="hero-icon">&#x1F52E;</div>
-      <h1 class="hero-title">
-        <span class="title-line">前世<span class="amp">&</span>来世</span>
-        <span class="title-sub">診断</span>
+      <div class="hero-icon" id="hero-icon">&#x1F52E;</div>
+      <h1 class="hero-title" id="hero-title">
+        <span class="title-line" id="title-line">前世<span class="amp">&</span>来世</span>
+        <span class="title-sub" id="title-sub">診断</span>
       </h1>
-      <p class="hero-desc">名前と誕生日から、あなたの魂の物語を紐解く</p>
+      <p class="hero-desc" id="hero-desc">名前と誕生日から、あなたの魂の物語を紐解く</p>
 
+      <!-- Past Life Form -->
       <form id="shindan-form" class="form" autocomplete="off">
         <div class="form-group">
           <label for="user-name" class="form-label">あなたの名前</label>
@@ -83,6 +118,90 @@
           <span class="btn-loading" style="display:none;">
             <span class="spinner"></span>
             魂の記憶を読み取り中...
+          </span>
+        </button>
+      </form>
+
+      <!-- Compatibility Form -->
+      <form id="compat-form" class="form" autocomplete="off" style="display:none;">
+        <div class="form-group">
+          <label for="compat-name1" class="form-label">あなたの名前</label>
+          <input type="text" id="compat-name1" class="form-input" placeholder="例：田中太郎" required maxlength="20">
+        </div>
+        <div class="form-group">
+          <label for="compat-birthday1" class="form-label">あなたの誕生日</label>
+          <input type="date" id="compat-birthday1" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label for="compat-name2" class="form-label">相手の名前</label>
+          <input type="text" id="compat-name2" class="form-input" placeholder="例：鈴木花子" required maxlength="20">
+        </div>
+        <div class="form-group">
+          <label for="compat-birthday2" class="form-label">相手の誕生日</label>
+          <input type="date" id="compat-birthday2" class="form-input" required>
+        </div>
+        <button type="submit" class="btn-diagnose btn-compat">
+          <span class="btn-text">&#x1F495; 相性を診断する &#x1F495;</span>
+          <span class="btn-loading" style="display:none;">
+            <span class="spinner"></span>
+            二人の縁を読み取り中...
+          </span>
+        </button>
+      </form>
+
+      <!-- Fortune Form -->
+      <form id="fortune-form" class="form" autocomplete="off" style="display:none;">
+        <div class="form-group">
+          <label for="fortune-name" class="form-label">あなたの名前</label>
+          <input type="text" id="fortune-name" class="form-input" placeholder="例：田中太郎" required maxlength="20">
+        </div>
+        <div class="form-group">
+          <label for="fortune-birthday" class="form-label">誕生日</label>
+          <input type="date" id="fortune-birthday" class="form-input" required>
+        </div>
+        <button type="submit" class="btn-diagnose btn-fortune">
+          <span class="btn-text">&#x2B50; 今日の運勢を見る &#x2B50;</span>
+          <span class="btn-loading" style="display:none;">
+            <span class="spinner"></span>
+            星の配置を読み取り中...
+          </span>
+        </button>
+      </form>
+
+      <!-- Guardian Spirit Form -->
+      <form id="guardian-form" class="form" autocomplete="off" style="display:none;">
+        <div class="form-group">
+          <label for="guardian-name" class="form-label">あなたの名前</label>
+          <input type="text" id="guardian-name" class="form-input" placeholder="例：田中太郎" required maxlength="20">
+        </div>
+        <div class="form-group">
+          <label for="guardian-birthday" class="form-label">誕生日</label>
+          <input type="date" id="guardian-birthday" class="form-input" required>
+        </div>
+        <button type="submit" class="btn-diagnose btn-guardian">
+          <span class="btn-text">&#x1F47B; 守護霊を診断する &#x1F47B;</span>
+          <span class="btn-loading" style="display:none;">
+            <span class="spinner"></span>
+            霊界と交信中...
+          </span>
+        </button>
+      </form>
+
+      <!-- Isekai Form -->
+      <form id="isekai-form" class="form" autocomplete="off" style="display:none;">
+        <div class="form-group">
+          <label for="isekai-name" class="form-label">あなたの名前</label>
+          <input type="text" id="isekai-name" class="form-input" placeholder="例：田中太郎" required maxlength="20">
+        </div>
+        <div class="form-group">
+          <label for="isekai-birthday" class="form-label">誕生日</label>
+          <input type="date" id="isekai-birthday" class="form-input" required>
+        </div>
+        <button type="submit" class="btn-diagnose btn-isekai">
+          <span class="btn-text">&#x2694; 転生先を診断する &#x2694;</span>
+          <span class="btn-loading" style="display:none;">
+            <span class="spinner"></span>
+            異世界の扉を開いています...
           </span>
         </button>
       </form>
@@ -106,7 +225,7 @@
     </div>
   </div>
 
-  <!-- Results Section -->
+  <!-- Results Section (Past Life) -->
   <section class="results" id="results" style="display:none;">
     <div class="results-inner">
       <h2 class="results-heading">&#x1F30C; あなたの魂の物語 &#x1F30C;</h2>
@@ -166,22 +285,289 @@
       </div>
 
       <!-- Share Buttons -->
-      <div class="share-section">
+      <div class="share-section" id="share-section-pastlife">
         <h3 class="share-title">&#x1F4E2; 結果をシェアしよう</h3>
         <div class="share-buttons">
           <button class="btn-share btn-x" id="btn-share-x">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            X&#x3067;&#x30B7;&#x30A7;&#x30A2;
+            Xでシェア
           </button>
           <button class="btn-share btn-line" id="btn-share-line">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-            LINE&#x3067;&#x30B7;&#x30A7;&#x30A2;
+            LINEでシェア
           </button>
           <button class="btn-share btn-save" id="btn-save-image">
-            &#x1F4F7; &#x753B;&#x50CF;&#x3092;&#x4FDD;&#x5B58;
+            &#x1F4F7; 画像を保存
           </button>
         </div>
-        <button class="btn-retry" id="btn-retry">&#x1F504; &#x3082;&#x3046;&#x4E00;&#x5EA6;&#x8A3A;&#x65AD;&#x3059;&#x308B;</button>
+        <button class="btn-retry" id="btn-retry">&#x1F504; もう一度診断する</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section (Compatibility) -->
+  <section class="results" id="results-compat" style="display:none;">
+    <div class="results-inner">
+      <h2 class="results-heading">&#x1F495; 相性診断結果 &#x1F495;</h2>
+      <p class="results-name" id="compat-results-name"></p>
+
+      <!-- Compatibility Percentage -->
+      <div class="compat-score-card card" id="card-compat-score">
+        <div class="compat-percentage-wrap">
+          <div class="compat-percentage" id="compat-percentage">0</div>
+          <div class="compat-percentage-label">%</div>
+        </div>
+        <div class="compat-type" id="compat-type"></div>
+      </div>
+
+      <!-- Past Life Connection -->
+      <div class="card card-past" id="card-compat-past">
+        <div class="card-header">
+          <div class="card-era-icon">&#x1F52E;</div>
+          <div>
+            <div class="card-label">&#x1F52E; 前世での関係</div>
+            <h3 class="card-era" id="compat-past-relation"></h3>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-story" id="compat-past-story"></p>
+        </div>
+      </div>
+
+      <!-- Compatibility Details -->
+      <div class="card card-future" id="card-compat-details">
+        <div class="card-header">
+          <div class="card-era-icon">&#x1F4AB;</div>
+          <div>
+            <div class="card-label">&#x1F4AB; 二人の相性詳細</div>
+            <h3 class="card-era" id="compat-advice-title">アドバイス</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="compat-meters" id="compat-meters"></div>
+          <p class="card-story" id="compat-advice"></p>
+        </div>
+      </div>
+
+      <div class="share-section" id="share-section-compat">
+        <h3 class="share-title">&#x1F4E2; 結果をシェアしよう</h3>
+        <div class="share-buttons">
+          <button class="btn-share btn-x" id="btn-share-x-compat">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Xでシェア
+          </button>
+          <button class="btn-share btn-line" id="btn-share-line-compat">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            LINEでシェア
+          </button>
+          <button class="btn-share btn-save" id="btn-save-image-compat">
+            &#x1F4F7; 画像を保存
+          </button>
+        </div>
+        <button class="btn-retry" id="btn-retry-compat">&#x1F504; もう一度診断する</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section (Fortune) -->
+  <section class="results" id="results-fortune" style="display:none;">
+    <div class="results-inner">
+      <h2 class="results-heading">&#x2B50; 今日の運勢 &#x2B50;</h2>
+      <p class="results-name" id="fortune-results-name"></p>
+
+      <!-- Fortune Score -->
+      <div class="card card-fortune-main" id="card-fortune-score">
+        <div class="fortune-stars" id="fortune-stars"></div>
+        <div class="fortune-score-text" id="fortune-score-text"></div>
+      </div>
+
+      <!-- Fortune Details -->
+      <div class="card card-past" id="card-fortune-details">
+        <div class="card-body">
+          <div class="fortune-item">
+            <span class="fortune-item-label">&#x1F3A8; ラッキーカラー</span>
+            <span class="fortune-item-value" id="fortune-color"></span>
+          </div>
+          <div class="fortune-item">
+            <span class="fortune-item-label">&#x1F522; ラッキーナンバー</span>
+            <span class="fortune-item-value" id="fortune-number"></span>
+          </div>
+          <div class="fortune-item">
+            <span class="fortune-item-label">&#x1F3AF; ラッキーアクション</span>
+            <span class="fortune-item-value" id="fortune-action"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fortune Advice -->
+      <div class="card card-future" id="card-fortune-advice">
+        <div class="card-header">
+          <div class="card-era-icon">&#x1F4AC;</div>
+          <div>
+            <div class="card-label">&#x1F4AC; 今日のアドバイス</div>
+            <h3 class="card-era" id="fortune-advice-title">メッセージ</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-story" id="fortune-advice"></p>
+        </div>
+      </div>
+
+      <div class="share-section" id="share-section-fortune">
+        <h3 class="share-title">&#x1F4E2; 結果をシェアしよう</h3>
+        <div class="share-buttons">
+          <button class="btn-share btn-x" id="btn-share-x-fortune">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Xでシェア
+          </button>
+          <button class="btn-share btn-line" id="btn-share-line-fortune">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            LINEでシェア
+          </button>
+          <button class="btn-share btn-save" id="btn-save-image-fortune">
+            &#x1F4F7; 画像を保存
+          </button>
+        </div>
+        <button class="btn-retry" id="btn-retry-fortune">&#x1F504; もう一度診断する</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section (Guardian) -->
+  <section class="results" id="results-guardian" style="display:none;">
+    <div class="results-inner">
+      <h2 class="results-heading">&#x1F47B; 守護霊診断結果 &#x1F47B;</h2>
+      <p class="results-name" id="guardian-results-name"></p>
+
+      <!-- Guardian Spirit Card -->
+      <div class="card card-past" id="card-guardian-main">
+        <div class="card-header">
+          <div class="card-era-icon" id="guardian-icon"></div>
+          <div>
+            <div class="card-label">&#x1F47B; あなたの守護霊</div>
+            <h3 class="card-era" id="guardian-type"></h3>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-occupation" id="guardian-spirit-name"></div>
+          <div class="card-trait">
+            <span class="trait-label">守護力:</span>
+            <span class="trait-value" id="guardian-power"></span>
+          </div>
+          <p class="card-story" id="guardian-message"></p>
+        </div>
+      </div>
+
+      <!-- Guardian Details -->
+      <div class="card card-future" id="card-guardian-details">
+        <div class="card-header">
+          <div class="card-era-icon">&#x1F4AB;</div>
+          <div>
+            <div class="card-label">&#x1F4AB; 守護霊からのメッセージ</div>
+            <h3 class="card-era" id="guardian-advice-title">導きの言葉</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-story" id="guardian-advice"></p>
+        </div>
+      </div>
+
+      <div class="guardian-protection-score soul-score">
+        <div class="score-label">守護力レベル</div>
+        <div class="score-bar">
+          <div class="score-fill" id="guardian-score-fill"></div>
+        </div>
+        <div class="score-value" id="guardian-score-value"></div>
+      </div>
+
+      <div class="share-section" id="share-section-guardian">
+        <h3 class="share-title">&#x1F4E2; 結果をシェアしよう</h3>
+        <div class="share-buttons">
+          <button class="btn-share btn-x" id="btn-share-x-guardian">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Xでシェア
+          </button>
+          <button class="btn-share btn-line" id="btn-share-line-guardian">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            LINEでシェア
+          </button>
+          <button class="btn-share btn-save" id="btn-save-image-guardian">
+            &#x1F4F7; 画像を保存
+          </button>
+        </div>
+        <button class="btn-retry" id="btn-retry-guardian">&#x1F504; もう一度診断する</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section (Isekai) -->
+  <section class="results" id="results-isekai" style="display:none;">
+    <div class="results-inner">
+      <h2 class="results-heading">&#x2694; 異世界転生結果 &#x2694;</h2>
+      <p class="results-name" id="isekai-results-name"></p>
+
+      <!-- Isekai World Card -->
+      <div class="card card-past" id="card-isekai-world">
+        <div class="card-header">
+          <div class="card-era-icon" id="isekai-world-icon"></div>
+          <div>
+            <div class="card-label">&#x1F30D; 転生先の世界</div>
+            <h3 class="card-era" id="isekai-world-name"></h3>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-occupation" id="isekai-class"></div>
+          <div class="card-trait">
+            <span class="trait-label">固有スキル:</span>
+            <span class="trait-value" id="isekai-skill"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Card -->
+      <div class="card card-future" id="card-isekai-stats">
+        <div class="card-header">
+          <div class="card-era-icon">&#x1F4CA;</div>
+          <div>
+            <div class="card-label">&#x1F4CA; ステータス</div>
+            <h3 class="card-era">キャラクターステータス</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="stat-bars" id="isekai-stat-bars"></div>
+        </div>
+      </div>
+
+      <!-- Adventure Synopsis -->
+      <div class="card card-past" id="card-isekai-story" style="animation-delay:0.7s;">
+        <div class="card-header">
+          <div class="card-era-icon">&#x1F4D6;</div>
+          <div>
+            <div class="card-label">&#x1F4D6; 冒険のあらすじ</div>
+            <h3 class="card-era">あなたの物語</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-story" id="isekai-synopsis"></p>
+        </div>
+      </div>
+
+      <div class="share-section" id="share-section-isekai">
+        <h3 class="share-title">&#x1F4E2; 結果をシェアしよう</h3>
+        <div class="share-buttons">
+          <button class="btn-share btn-x" id="btn-share-x-isekai">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Xでシェア
+          </button>
+          <button class="btn-share btn-line" id="btn-share-line-isekai">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            LINEでシェア
+          </button>
+          <button class="btn-share btn-save" id="btn-save-image-isekai">
+            &#x1F4F7; 画像を保存
+          </button>
+        </div>
+        <button class="btn-retry" id="btn-retry-isekai">&#x1F504; もう一度診断する</button>
       </div>
     </div>
   </section>
@@ -192,8 +578,15 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
-  <!-- Footer -->
+  <!-- Footer with diagnosis links -->
   <footer class="site-footer">
+    <div class="footer-links">
+      <a href="#" class="footer-link" data-type="pastlife">前世&来世診断</a>
+      <a href="#" class="footer-link" data-type="compatibility">相性診断</a>
+      <a href="#" class="footer-link" data-type="fortune">今日の運勢</a>
+      <a href="#" class="footer-link" data-type="guardian">守護霊診断</a>
+      <a href="#" class="footer-link" data-type="isekai">異世界転生診断</a>
+    </div>
     <p>&copy; 2026 <a href="https://richend0913.github.io/">Richend Digital</a></p>
   </footer>
 

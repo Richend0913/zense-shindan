@@ -87,12 +87,113 @@ body {
 }
 
 /* ========================================
+   Diagnosis Counter
+   ======================================== */
+.diagnosis-counter {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.counter-icon { font-size: 1.2rem; }
+.counter-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+#counter-number {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* ========================================
+   Navigation Cards
+   ======================================== */
+.nav-cards {
+  position: relative;
+  z-index: 2;
+  padding: 0 12px 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.nav-cards::-webkit-scrollbar { display: none; }
+.nav-cards-inner {
+  display: flex;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.nav-card {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 14px 10px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  min-width: 72px;
+  backdrop-filter: blur(10px);
+}
+.nav-card:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(139, 92, 246, 0.3);
+  transform: translateY(-2px);
+}
+.nav-card.active {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: var(--accent-purple);
+  color: var(--text-primary);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+.nav-card-icon { font-size: 1.5rem; }
+.nav-card-name { white-space: nowrap; }
+.nav-card-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  font-size: 0.55rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 8px;
+  letter-spacing: 0.05em;
+}
+.badge-popular {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: #fff;
+}
+.badge-new {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: #fff;
+}
+.badge-daily {
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  color: #fff;
+}
+
+/* ========================================
    Hero Section
    ======================================== */
 .hero {
   position: relative;
   z-index: 1;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,7 +284,6 @@ body {
   box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15), var(--shadow-glow);
 }
 .form-input::placeholder { color: var(--text-muted); }
-/* Date input styling */
 .form-input[type="date"] { color-scheme: dark; }
 
 /* ========================================
@@ -204,6 +304,11 @@ body {
   transition: all 0.3s ease;
   margin-top: 8px;
 }
+.btn-compat { background: linear-gradient(135deg, #ec4899, #f43f5e); }
+.btn-fortune { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+.btn-guardian { background: linear-gradient(135deg, #8b5cf6, #6366f1); }
+.btn-isekai { background: linear-gradient(135deg, #ef4444, #f97316); }
+
 .btn-diagnose::before {
   content: '';
   position: absolute;
@@ -213,16 +318,12 @@ body {
   transform: rotate(45deg);
   transition: all 0.5s ease;
 }
-.btn-diagnose:hover::before {
-  left: 100%;
-}
+.btn-diagnose:hover::before { left: 100%; }
 .btn-diagnose:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
 }
-.btn-diagnose:active {
-  transform: translateY(0);
-}
+.btn-diagnose:active { transform: translateY(0); }
 .btn-text, .btn-loading { display: inline-flex; align-items: center; gap: 8px; }
 
 /* Spinner */
@@ -270,7 +371,6 @@ body {
 }
 .loading-ring-fill {
   fill: none;
-  stroke: url(#loading-gradient);
   stroke: var(--accent-purple);
   stroke-width: 3;
   stroke-dasharray: 283;
@@ -367,6 +467,17 @@ body {
   background: var(--gradient-future);
   animation-delay: 0.5s;
   box-shadow: 0 4px 40px rgba(99, 102, 241, 0.1);
+}
+.card-fortune-main {
+  background: linear-gradient(135deg, #1a1a0a 0%, #2d2a0e 50%, #1a1a0a 100%);
+  animation-delay: 0.3s;
+  box-shadow: 0 4px 40px rgba(245, 158, 11, 0.1);
+  text-align: center;
+}
+.card-compat-score {
+  background: linear-gradient(135deg, #1a0a1a 0%, #2d0e2d 50%, #1a0a1a 100%);
+  animation-delay: 0.3s;
+  text-align: center;
 }
 .card-header {
   display: flex;
@@ -483,6 +594,141 @@ body {
 }
 
 /* ========================================
+   Compatibility Specific
+   ======================================== */
+.compat-percentage-wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.compat-percentage {
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  font-weight: 900;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+.compat-percentage-label {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.compat-type {
+  font-size: 1.4rem;
+  font-weight: 900;
+  font-family: var(--font-serif);
+}
+.compat-meter-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.compat-meter-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  width: 60px;
+  flex-shrink: 0;
+  text-align: right;
+}
+.compat-meter-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.compat-meter-fill {
+  height: 100%;
+  border-radius: 4px;
+  width: 0%;
+  transition: width 1.5s ease;
+}
+.compat-meter-val {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  width: 40px;
+  text-align: right;
+}
+
+/* ========================================
+   Fortune Specific
+   ======================================== */
+.fortune-stars {
+  font-size: 3rem;
+  margin-bottom: 8px;
+  color: var(--gold);
+  letter-spacing: 4px;
+}
+.fortune-score-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.fortune-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.fortune-item:last-child { border-bottom: none; }
+.fortune-item-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.fortune-item-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ========================================
+   Isekai Stat Bars
+   ======================================== */
+.stat-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  width: 90px;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+.stat-bar-track {
+  flex: 1;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.stat-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  width: 0%;
+  transition: width 1.5s ease;
+}
+.stat-value {
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--gold);
+  width: 36px;
+  text-align: right;
+}
+
+/* ========================================
    Share Section
    ======================================== */
 .share-section {
@@ -555,6 +801,22 @@ body {
   position: relative;
   z-index: 1;
 }
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+  margin-bottom: 16px;
+}
+.footer-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 4px 0;
+}
+.footer-link:hover { color: var(--accent-purple); }
 .site-footer a {
   color: var(--text-muted);
   text-decoration: none;
@@ -586,6 +848,12 @@ body {
   .card-era { font-size: 1.1rem; }
   .card-era-icon { width: 48px; height: 48px; font-size: 1.5rem; }
   .btn-share { padding: 10px 16px; font-size: 0.8rem; }
+  .nav-cards-inner { flex-wrap: nowrap; justify-content: flex-start; }
+  .nav-card { min-width: 68px; padding: 10px 10px 8px; }
+  .nav-card-icon { font-size: 1.3rem; }
+  .nav-card-name { font-size: 0.65rem; }
+  .compat-percentage { font-size: 3.5rem; }
+  .fortune-stars { font-size: 2.4rem; }
 }
 @media (min-width: 768px) {
   .title-line { font-size: 3.5rem; }
